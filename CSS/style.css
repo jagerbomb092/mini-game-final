@@ -1,0 +1,382 @@
+html{
+    font-family: 'Playfair Display SC', serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.video-content{
+    opacity: 0.95;
+    background-color: lightgrey;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    width: 56%;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(236, 232, 232, 0.2);
+    z-index: 1;
+    position: absolute;
+    opacity: 0.5;
+}
+.title{
+    font-size: 200%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 60%;
+    height: 30%;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+.form{
+
+    font-size: 80%;
+    height: 300px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+
+}
+.username{
+    width: 100%;
+    background-color: yellow;
+    position: relative;
+    height: 50px;
+    
+}
+.username input{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.username label{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    letter-spacing: 1px;
+}
+.username label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid black;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+}
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.username input:focus + .label-name .content-name,
+.username input:valid + .label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: black;
+    letter-spacing: 2px;
+}
+.username input:focus + .label-name::after,
+ .username input:valid + .label-name::after{
+    transform: translateX(0%);
+}
+.psw{
+    width: 100%;
+    background-color: yellow;
+    position: relative;
+    height: 50px;
+}
+.psw input{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.psw label{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    letter-spacing: 1px;
+}
+.psw label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid black;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+}
+
+.psw input:focus + .label-name .content-name,
+.psw input:valid + .label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: black;
+    letter-spacing: 2px;
+}
+.psw input:focus + .label-name::after,
+ .psw input:valid + .label-name::after{
+    transform: translateX(0%);
+}
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+.button{
+    height: 25%;
+    width: 60%;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+.login{
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    outline: none;
+}
+.login::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+}
+.login::after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+}
+.login:hover::before {
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    border-right:none ;
+    border-bottom:none ;
+    transition: height 0.2s linear,
+                width 0.2s linear 0.2s;
+}
+.login:hover::after{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    border-top:none ;
+    border-left:none ;
+    transition: height 0.2s linear,
+                width 0.2s linear 0.2s;
+}
+.login:hover{
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+.s-login{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px ;
+}
+.gg-login{
+    width: 45%;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+.fb-login{
+    width: 45%;
+    font-size: 50px;
+}
+.login-s{
+    padding: 18%;
+    text-transform: uppercase;
+    letter-spacing: 1 px;
+}
+.login-s:hover{
+    font-size: 25%;
+    letter-spacing: 3px;
+}
+.abc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.or{
+
+    position: relative;
+    text-transform: lowercase;
+    border-top: 0.7px solid black;
+    width: 50%;
+
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.or-2{
+    position: absolute;
+    top: -18px;
+    background-color: white;
+    padding: 6px;
+    text-align: center;
+    font-size: 50%;
+    font-style: oblique;
+}
+@media screen and (max-width: 600px){
+    .s-login{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .gg-login{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .fb-login{
+        width: 100%;
+    }
+    .title{
+        align-items: center;
+        margin-bottom: 60px;
+        height: 50%;
+    }
+    .or{
+        margin-bottom:20px ;
+        display: block;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .form{
+        height: 50%;
+        padding-top: 20px;
+    }
+    .username    .content-name{
+        padding: 0;
+    }
+    .button{
+        width: 100%;
+        height: 15%;
+    }
+    .or{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        
+        justify-content: center;
+        text-align: center;
+    }
+}
+.bt{
+    font-family: 'Playfair Display SC', serif;
+}
+@media screen and (max-width: 855px){
+.s-login{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.gg-login{
+    width: 50%;
+    margin-bottom: 5px;
+}
+.fb-login{
+    width: 50%;
+}
+.title{
+    align-items: center;
+    margin-bottom: 0px;
+    height: 10%;
+}
+.or{
+    margin-bottom:20px ;
+    display: block;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.form{
+    height: 50%;
+    padding-top: 20px;
+}
+.username    .content-name{
+    padding: 0;
+}
+.button{
+    width: 100%;
+    height: 15%;
+}
+.or{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    text-align: center;
+}
+}
+.bt{
+font-family: 'Playfair Display SC', serif;
+}
